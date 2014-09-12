@@ -1,0 +1,33 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controlesDll="clr-namespace:MultiPointControl_DLL.Controls.BasicControls;assembly=MultiPointControl_DLL" x:Class="MMMFrameworkTemplate.SetupWindow"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" WindowStyle="None" WindowState="Maximized" Height="437" Width="439">
+	<Grid x:Name="choiceSetupGrid">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="0.148*"/>
+			<ColumnDefinition Width="0.684*"/>
+			<ColumnDefinition Width="0.168*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.168*"/>
+			<RowDefinition Height="0.093*"/>
+			<RowDefinition Height="0.541*"/>
+			<RowDefinition Height="0.198*"/>
+		</Grid.RowDefinitions>
+        <controlesDll:MultiPointLabel x:Name="close" MultiPointMouseDownEvent="close_MultiPointMouseDownEvent" Grid.Column="2" MultiPointMouseEnterEvent="close_MultiPointMouseEnterEvent" MultiPointMouseLeaveEvent="close_MultiPointMouseLeaveEvent" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+			<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="200*"/>
+					<RowDefinition Height="100*"/>
+				</Grid.RowDefinitions>
+				<Viewbox Grid.Row="1">
+					<TextBlock Text="Close" TextWrapping="Wrap" FontFamily="Calibri"/>
+				</Viewbox>
+				<ContentControl>
+					<Image Source="pack://application:,,,/MultiPointControl_DLL;Component/Images/Grandes/Botones/Settings/boton_cerrar.png" />
+				</ContentControl>
+			</Grid>
+        </controlesDll:MultiPointLabel>
+	</Grid>
+</Window>
